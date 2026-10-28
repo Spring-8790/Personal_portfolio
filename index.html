@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="个人作品集 - 展示我的设计、开发与创作作品" />
+  <title>个人作品集</title>
+
+  <!-- 内联 SVG 图标作为网站 favicon（轻量，无外部依赖） -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231f3d33'/%3E%3Ctext x='50' y='68' font-size='56' font-family='Georgia,serif' fill='%23fff' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== 顶部导航 ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">你的名字<span class="brand-dot">.</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="#hero" class="nav-link">首页</a>
+        <a href="#about" class="nav-link">关于</a>
+        <a href="#works" class="nav-link">作品</a>
+        <a href="#skills" class="nav-link">技能</a>
+        <a href="#contact" class="nav-link">联系</a>
+      </nav>
+
+      <!-- 移动端菜单按钮 -->
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== Hero 首屏 ===================== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-avatar" aria-hidden="true">你的名字</div>
+        <p class="hero-eyebrow">个人作品集 · PORTFOLIO</p>
+        <h1 class="hero-title">你好，我是<span class="hero-name">你的名字</span></h1>
+        <p class="hero-subtitle">身份定位 · 一句话简介</p>
+        <p class="hero-desc">
+          这里是你的个人介绍，用一两句话说明你擅长什么、正在做什么、希望与什么样的机会合作。
+          内容后续可以随时替换。
+        </p>
+        <div class="hero-actions">
+          <a href="#works" class="btn btn-primary">查看作品</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 关于我 ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">ABOUT</p>
+          <h2 class="section-title">关于我</h2>
+        </div>
+        <div class="about-grid">
+          <p class="about-text">
+            这里是你的详细介绍段落，可以写你的背景、经验、专注领域与职业理念。
+            建议控制在两三段以内，保持简洁有力。示例内容将在你提供真实信息后替换。
+          </p>
+          <ul class="about-facts">
+            <li><span class="fact-label">所在地</span><span class="fact-value">你的城市</span></li>
+            <li><span class="fact-label">经验</span><span class="fact-value">X 年</span></li>
+            <li><span class="fact-label">专注</span><span class="fact-value">设计 / 开发 / 创作</span></li>
+            <li><span class="fact-label">状态</span><span class="fact-value">开放合作</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 作品集 ===================== -->
+    <section class="section section-alt" id="works">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">WORKS</p>
+          <h2 class="section-title">精选作品</h2>
+          <p class="section-note">作品数据由 <code>data/works.json</code> 驱动，新增作品只需在该文件中添加条目。</p>
+        </div>
+
+        <!-- 分类筛选按钮（由 JS 根据数据自动生成） -->
+        <div class="filter-bar" id="filterBar" role="tablist" aria-label="作品分类筛选"></div>
+
+        <!-- 作品卡片网格（由 JS 渲染） -->
+        <div class="works-grid" id="worksGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== 技能 ===================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">SKILLS</p>
+          <h2 class="section-title">技能与工具</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="skill-group-title">设计</h3>
+            <ul class="skill-tags">
+              <li>Figma</li><li>Photoshop</li><li>Illustrator</li><li>UI / UX</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">开发</h3>
+            <ul class="skill-tags">
+              <li>HTML / CSS</li><li>JavaScript</li><li>TypeScript</li><li>Vue / React</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">其他</h3>
+            <ul class="skill-tags">
+              <li>项目管理</li><li>写作</li><li>摄影</li><li>视频剪辑</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 联系我 ===================== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">CONTACT</p>
+          <h2 class="section-title">联系我</h2>
+        </div>
+        <div class="contact-card">
+          <p class="contact-text">如果你有合作机会、项目想法，或只是想打个招呼，欢迎随时联系我。</p>
+          <a class="contact-email" href="mailto:you@example.com">you@example.com</a>
+          <div class="contact-social">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="微博">微博</a>
+            <a href="#" aria-label="微信公众号">公众号</a>
+            <a href="#" aria-label="Bilibili">Bilibili</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== 页脚 ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 你的名字 · 保留所有权利</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
